@@ -1,0 +1,224 @@
+:root {
+    --ff: 'Overpass', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+    font-family: var(--ff);
+    font-weight: var(--fw-regular);
+    background-color: #141519;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.panel {
+    background: #1f2630;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 330px;
+  height: 360px;
+    text-align: left;
+}
+
+.star {
+    background: #262e3c;
+    padding: .75rem;
+    border-radius: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 1.5rem auto .5rem;
+    color: #e3e7e9;
+}
+
+.text {
+    color: #939aa4;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    color: #939aa4;
+    background: #282e38;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.rating:hover {
+  color: #ffffff;
+  background-color: #7b8896;
+  cursor: pointer;
+}
+
+.rating:focus{
+  color: #ffffff;
+  background-color: #fc7614;
+}
+
+.submit {
+  background-color: #fc7614;
+  border: none;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 17.2rem;
+  height: 2.7rem;
+  margin-top: 1rem;
+  text-align: center;
+  align-items: center;
+  letter-spacing: .15rem;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  color: #ffffff;
+}
+
+.submit:is(:hover, :active) {
+  color: #fc7614;
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.second-panel {
+  background: #1f2630;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  width: 330px;
+  height: 360px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you-image {
+  padding-top: .5rem;
+  padding-left: 3.5rem;
+  margin-bottom: 1.9rem;
+}
+
+.rating-box {
+  color: #fc7614;
+  background: #262e3c;
+  border-radius: 1rem;
+  padding-inline: .65rem;
+  padding-block: .5rem;
+  font-size: .9rem;
+
+}
+
+.message {
+  color: #ffffff;
+  margin-top: 1.7rem;
+}
+
+.detail {
+  color: #939aa4;
+  margin-top: .5rem;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 600px) {
+  .panel{
+      min-width: 365px;
+      min-height: 370px;
+      padding: auto 4rem;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .second-panel {
+    min-width: 365px;
+    min-height: 370px;
+    padding: 1.7rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text {
+    margin-top: 1rem;
+  }
+   
+  .rating {
+    min-width: 3rem;
+    min-height: 3rem;
+    margin-bottom: .7rem;
+  }
+  .submit {
+    min-width: 19rem;
+    max-height: 2.5rem;
+  }
+
+  .thank-you-image {
+    padding-left: 4.4rem;
+  }
+}

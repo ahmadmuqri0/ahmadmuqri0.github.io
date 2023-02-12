@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Muqri Edit | Interactive rating component</title>
+
+</head>
+<body>
+
+  <div class="panel">
+    <img class="star" src="images/icon-star.svg" alt="star-icon">
+    <h1 class="title">How did we do?</h1>
+    <p class="text">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    <div class="group">
+      <button class="rating">1</button>
+      <button class="rating">2</button>
+      <button class="rating">3</button>
+      <button class="rating">4</button>
+      <button class="rating">5</button>
+    </div>
+
+    <button class="submit">Submit</button>
+  </div>
+
+    <div class="second-panel hidden">
+      <img class="thank-you-image" src="/images/illustration-thank-you.svg" alt="thank-you-illust">
+
+      <span class="rating-box">
+        You selected 
+        <span id="number"></span>
+        out of 5</span>
+
+      <h2 class="message">Thank you!</h2>
+
+      <p class="detail">We appreciate you taking the time to give a rating. 
+        if you ever need more support, don't hesitate to get in touch!</p>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
