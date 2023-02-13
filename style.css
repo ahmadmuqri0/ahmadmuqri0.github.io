@@ -98,7 +98,7 @@ ul {
   transition: .3s;
 }
 
-.btn-submit:is(:hover, :focus) {
+.btn-submit:is(:hover, :active) {
   color: hsl(25, 97%, 53%);
   background-color: hsl(0, 0%, 100%);
 }
